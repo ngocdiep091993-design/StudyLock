@@ -19,8 +19,11 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Cài Android SDK và chấp nhận giấy phép
-        uses: android-actions/setup-android@v3
+      - name: Chấp nhận giấy phép Android SDK và cài nền tảng cần thiết
+        run: |
+          SDKM="$(ls "$ANDROID_HOME"/cmdline-tools/*/bin/sdkmanager | head -n 1)"
+          yes | "$SDKM" --licenses > /dev/null || true
+          "$SDKM" "platforms;android-35" "build-tools;34.0.0"
 
       - name: Cài Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
