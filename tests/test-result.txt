@@ -1,0 +1,2 @@
+PASS: schedule boundaries, midnight, invalid inputs, reward expiry, reboot invalidation, daily cap, truncated reward, midnight accounting, multi-window roundtrip, weekly schedule, overnight week wrap, warning, zero limit, typed math; 90000 generated question checks.
+PASS: 108000 curriculum draws across grades 4?6, terms 0?2, difficulty 1?3, both subjects; 90 unique English prompts; adaptive thresholds and rest boundary.
